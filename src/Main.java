@@ -27,8 +27,12 @@ public class Main {
                     System.out.println("Yatırmak İstediğiniz Tutarı Giriniz : ");
                     double yatirilan = sc.nextDouble();
 
-                    bakiye += yatirilan;
-                    System.out.println("Yeni Bakiyeniz : " + bakiye + " TL");
+                    if(yatirilan < 0){
+                        System.out.println("Hata : Geçersiz Tutar ! ");
+                    }else {
+                        bakiye += yatirilan;
+                        System.out.println("Yeni Bakiyeniz : " + bakiye + " TL");
+                    }
                     break;
 
                 case 3:
